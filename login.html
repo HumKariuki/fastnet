@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastnet Fiber | Customer Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004d99;
+            --secondary: #ff6600;
+            --dark: #333333;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --success: #28a745;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --whatsapp: #25D366;
+            --danger: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .auth-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            margin: 20px 0;
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .auth-header h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .auth-header p {
+            color: var(--gray);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e65c00;
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .auth-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .auth-footer a:hover {
+            color: var(--secondary);
+        }
+        
+        .password-toggle {
+            position: relative;
+        }
+        
+        .password-toggle .toggle-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: var(--gray);
+        }
+        
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .divider::before {
+            margin-right: 10px;
+        }
+        
+        .divider::after {
+            margin-left: 10px;
+        }
+        
+        .social-login {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .social-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+        
+        .social-btn.google {
+            color: #DB4437;
+        }
+        
+        .social-btn.facebook {
+            color: #4267B2;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 576px) {
+            .auth-container {
+                padding: 30px 20px;
+            }
+            
+            .social-login {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo">
+            <img src="fastnet-logo.png" alt="Fastnet Fiber Logo">
+            <div class="logo-text">
+                <h1>Fastnet Fiber</h1>
+                <p>Fast. Reliable. Affordable.</p>
+            </div>
+        </div>
+        
+        <div class="auth-header">
+            <h2>Welcome Back</h2>
+            <p>Sign in to manage your account and services</p>
+        </div>
+        
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group password-toggle">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                <i class="fas fa-eye toggle-icon" id="toggle-password"></i>
+            </div>
+            
+            <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me" style="display: inline; margin-left: 5px;">Remember me</label>
+                </div>
+                <a href="forgot-password.html" style="font-size: 0.9rem;">Forgot password?</a>
+            </div>
+            
+            <button type="submit" class="btn">Sign In</button>
+            
+            <div class="divider">or continue with</div>
+            
+            <div class="social-login">
+                <a href="#" class="social-btn google">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="#" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>
+        </form>
+        
+        <div class="auth-footer">
+            Don't have an account? <a href="register.html">Create account</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle password visibility
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordInput = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+            
+            // Form submission
+            document.getElementById('login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const rememberMe = document.getElementById('remember-me').checked;
+                
+                // In a real implementation, you would validate and send to server
+                console.log('Login attempt with:', { email, password, rememberMe });
+                
+                // For demo purposes, we'll simulate a successful login
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            });
+        });
+    </script>
+</body>
+</html>
