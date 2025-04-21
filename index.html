@@ -1,2502 +1,2313 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0066cc">
-    <title>Fastnet Fiber | Affordable Fiber Internet in KAHAWA WENDANI</title>
-    <meta name="description" content="Fastnet Fiber offers affordable, fast, and reliable fiber internet with daytime support. Get connected within 24 hours with free installation!">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    
-    <!-- Modern font loading with fallback -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </noscript>
-    
-    <!-- Font Awesome with modern loading -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-    
-    <!-- Modern CSS with CSS variables and new features -->
-    <style>
-        :root {
-            --primary: #0066cc;
-            --primary-dark: #004d99;
-            --secondary: #ff6600;
-            --dark: #333333;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --success: #28a745;
-            --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --whatsapp: #25D366;
-            --danger: #dc3545;
-            
-            /* New modern variables */
-            --surface: #ffffff;
-            --surface-dim: #f8f9fa;
-            --surface-bright: #ffffff;
-            --surface-container-lowest: #ffffff;
-            --surface-container-low: #f3f4f6;
-            --surface-container: #e5e7eb;
-            --surface-container-high: #d1d5db;
-            --surface-container-highest: #9ca3af;
-            --on-surface: #1f2937;
-            --on-surface-variant: #374151;
-            --outline: #d1d5db;
-            --outline-variant: #e5e7eb;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --surface: #1a1a1a;
-                --surface-dim: #121212;
-                --surface-bright: #2a2a2a;
-                --surface-container-lowest: #0d0d0d;
-                --surface-container-low: #1a1a1a;
-                --surface-container: #242424;
-                --surface-container-high: #2e2e2e;
-                --surface-container-highest: #3d3d3d;
-                --on-surface: #e5e5e5;
-                --on-surface-variant: #d4d4d4;
-                --outline: #404040;
-                --outline-variant: #525252;
-            }
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        *,
-        *::before,
-        *::after {
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-            text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        body {
-            font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        /* Modern Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            letter-spacing: -0.025em;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-            color: var(--on-surface-variant);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        
-        a:hover {
-            color: var(--secondary);
-        }
-        
-        img, picture, video, canvas, svg {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            font-style: italic;
-            background-repeat: no-repeat;
-            background-size: cover;
-            shape-margin: 1rem;
-        }
-        
-        ul, ol {
-            list-style: none;
-        }
-        
-        /* Modern Container */
-        .container {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 clamp(1rem, 5vw, 2rem);
-        }
-        
-        /* Modern Button System */
-        .btn {
-            --btn-bg: var(--primary);
-            --btn-hover: var(--primary-dark);
-            --btn-text: var(--white);
-            
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--btn-bg);
-            color: var(--btn-text);
-            border: none;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center;
-            font-size: 1rem;
-            min-height: 3rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            will-change: transform;
-        }
-        
-        .btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: var(--btn-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn:hover::after {
-            opacity: 1;
-        }
-        
-        .btn:active {
-            transform: scale(0.98);
-        }
-        
-        .btn-secondary {
-            --btn-bg: var(--secondary);
-            --btn-hover: #e65c00;
-        }
-        
-        .btn-whatsapp {
-            --btn-bg: var(--whatsapp);
-            --btn-hover: #128C7E;
-        }
-        
-        .btn-danger {
-            --btn-bg: var(--danger);
-            --btn-hover: #c82333;
-        }
-        
-        .btn-block {
-            display: flex;
-            width: 100%;
-        }
-        
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-        
-        .text-primary {
-            color: var(--primary);
-        }
-        
-        .text-secondary {
-            color: var(--secondary);
-        }
-        
-        .text-danger {
-            color: var(--danger);
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: clamp(3rem, 5vw, 5rem) 0;
-            position: relative;
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 3rem;
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
-            text-align: center;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5rem;
-            height: 0.25rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 0.25rem;
-        }
-        
-        /* Modern Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            overflow-y: auto;
-            overscroll-behavior: contain;
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .modal.active {
-            opacity: 1;
-        }
-        
-        .modal-content {
-            background-color: var(--surface);
-            margin: auto;
-            padding: 2rem;
-            border-radius: 1rem;
-            width: 100%;
-            max-width: 36rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .modal.active .modal-content {
-            transform: translateY(0);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 2.5rem;
-            height: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: var(--surface-container-low);
-            color: var(--on-surface);
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-        }
-        
-        .close-modal:hover {
-            background-color: var(--surface-container);
-            transform: rotate(90deg);
-        }
-        
-        .modal-title {
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-        
-        /* Modern Form Styles */
-        .form-group {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--on-surface-variant);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            border: 1px solid var(--outline);
-            border-radius: 0.5rem;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            min-height: 3rem;
-            background-color: var(--surface-container-lowest);
-            color: var(--on-surface);
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
-        }
-        
-        .form-row {
-            display: flex;
-            gap: 1.25rem;
-        }
-        
-        .form-row .form-group {
-            flex: 1;
-        }
-        
-        /* Modern Auth Forms */
-        .auth-container {
-            max-width: 32rem;
-            margin: 0 auto;
-            background-color: var(--surface);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .auth-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .auth-header h2 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .auth-footer {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-        
-        /* Modern Dashboard */
-        .dashboard-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--white);
-            padding: 2rem 0;
-            margin-bottom: 2.5rem;
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-        }
-        
-        .user-avatar {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
-            background-color: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary);
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-        
-        .user-details h3 {
-            color: var(--white);
-            margin-bottom: 0.25rem;
-        }
-        
-        .user-details p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 0;
-        }
-        
-        .dashboard-nav {
-            margin-top: 1.5rem;
-        }
-        
-        .dashboard-nav ul {
-            display: flex;
-            gap: 0.75rem;
-            overflow-x: auto;
-            padding-bottom: 0.5rem;
-            scrollbar-width: none;
-        }
-        
-        .dashboard-nav ul::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .dashboard-nav a {
-            color: rgba(255, 255, 255, 0.9);
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            font-size: 0.875rem;
-        }
-        
-        .dashboard-nav a:hover, .dashboard-nav a.active {
-            color: var(--white);
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-        
-        .dashboard-content {
-            background-color: var(--surface);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-        
-        /* Modern Payment Form */
-        .payment-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .payment-method {
-            text-align: center;
-        }
-        
-        .payment-method input {
-            position: absolute;
-            opacity: 0;
-        }
-        
-        .payment-method label {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1.25rem;
-            border: 2px solid var(--outline);
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .payment-method input:checked + label {
-            border-color: var(--primary);
-            background-color: rgba(0, 102, 204, 0.05);
-            box-shadow: 0 0 0 1px var(--primary);
-        }
-        
-        .payment-method i {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary);
-        }
-        
-        /* Modern Header */
-        .top-bar {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 0.75rem 0;
-            font-size: 0.875rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .top-bar-contact {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .top-bar-contact a {
-            color: var(--white);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            opacity: 0.9;
-        }
-        
-        .top-bar-contact a:hover {
-            opacity: 1;
-            transform: translateY(-1px);
-        }
-        
-        .top-bar-social {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .top-bar-social a {
-            color: var(--white);
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            opacity: 0.8;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.75rem;
-            height: 1.75rem;
-        }
-        
-        .top-bar-social a:hover {
-            transform: translateY(-3px) scale(1.15);
-            opacity: 1;
-        }
-        
-        header {
-            background-color: var(--surface);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            border-bottom: 1px solid var(--outline);
-        }
-        
-        header.scrolled {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1.125rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo img {
-            height: 7.5rem;
-            width: auto;
-            border: none;
-            outline: none;
-            background: none;
-            box-shadow: none;
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        
-        .logo-text h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0.375rem;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.025em;
-            font-weight: 700;
-        }
-        
-        .logo-text p {
-            font-size: 0.875rem;
-            color: var(--gray);
-            margin-bottom: 0;
-            opacity: 0.9;
-        }
-        
-        /* Navigation */
-        .main-nav ul {
-            display: flex;
-            gap: 1.25rem;
-        }
-        
-        .nav-link {
-            color: var(--on-surface);
-            font-weight: 500;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .nav-link.active {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .auth-btns {
-            display: flex;
-            gap: 0.75rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-            color: var(--white);
-            padding: 8rem 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 1.25rem;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-        
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.375rem);
-            max-width: 50rem;
-            margin: 0 auto 2.5rem;
-            opacity: 0.9;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .top-bar .container {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-            
-            .top-bar-contact,
-            .top-bar-social {
-                gap: 1rem;
-                justify-content: center;
-            }
-            
-            .logo img {
-                height: 6rem;
-            }
-            
-            .logo-text h1 {
-                font-size: 1.25rem;
-            }
-            
-            .hero {
-                padding: 6rem 0;
-            }
-        }
-        
-        /* Modern Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            z-index: 1001;
-            width: 2.5rem;
-            height: 2.5rem;
-            justify-content: center;
-            align-items: center;
-            border-radius: 0.375rem;
-            transition: all 0.3s ease;
-        }
-        
-        .mobile-menu-btn:hover {
-            background-color: var(--surface-container-low);
-        }
-        
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            gap: 0.375rem;
-            width: 1.5rem;
-        }
-        
-        .bar {
-            height: 2px;
-            width: 100%;
-            background-color: var(--on-surface);
-            border-radius: 1px;
-            transition: all 0.3s ease;
-            transform-origin: left center;
-        }
-        
-        .mobile-menu-btn.active .bar:nth-child(1) {
-            transform: rotate(45deg) translate(0.15rem, -0.1rem);
-        }
-        
-        .mobile-menu-btn.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active .bar:nth-child(3) {
-            transform: rotate(-45deg) translate(0.15rem, 0.1rem);
-        }
-        
-        /* Animation Classes */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-            from { 
-                opacity: 0;
-                transform: translateY(1rem);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fade {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        .animate-slide-up {
-            animation: slideUp 0.5s ease forwards;
-        }
-        
-        /* Reduced motion preferences */
-        @media (prefers-reduced-motion) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-    </style>
-</head>
-        
-        /* Features Section */
-        .features {
-            background-color: var(--white);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: var(--light);
-            padding: 35px 25px;
-            border-radius: 8px;
-            text-align: center;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .feature-icon {
-            font-size: 2.8rem;
-            color: var(--primary);
-            margin-bottom: 25px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature-card p {
-            font-size: 1rem;
-            color: var(--gray);
-        }
-        
-        /* Packages Section */
-        .packages {
-            background-color: var(--light);
-        }
-        
-        .package-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            gap: 15px;
-        }
-        
-        .tab-btn {
-            padding: 12px 30px;
-            background-color: var(--white);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-            font-size: 1rem;
-            min-height: 44px;
-        }
-        
-        .tab-btn.active {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-        
-        .tab-btn:hover:not(.active) {
-            background-color: rgba(0, 102, 204, 0.1);
-        }
-        
-        .package-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .package-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .package-header {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 25px 20px;
-            text-align: center;
-        }
-        
-        .package-header h3 {
-            font-size: 1.6rem;
-            margin-bottom: 5px;
-        }
-        
-        .package-price {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-        
-        .package-price span {
-            font-size: 1rem;
-            font-weight: 400;
-        }
-        
-        .package-body {
-            padding: 30px;
-        }
-        
-        .package-features {
-            margin-bottom: 30px;
-        }
-        
-        .package-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-        }
-        
-        .package-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .package-features li i {
-            color: var(--success);
-            font-size: 1.1rem;
-        }
-        
-        .package-actions {
-            display: flex;
-            gap: 10px;
-        }
-        
-        /* Coverage Section */
-        .coverage {
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
-            background-attachment: fixed;
-        }
-        
-        .coverage-areas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .coverage-area {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 25px 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .coverage-area:hover {
-            transform: translateY(-5px);
-        }
-        
-        .coverage-area i {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .coverage-area h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            background-color: var(--white);
-        }
-        
-        .testimonial-slider {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .testimonial {
-            background-color: var(--light);
-            padding: 40px;
-            border-radius: 8px;
-            margin: 20px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-        
-        .testimonial::before {
-            content: '\201C';
-            font-size: 5rem;
-            color: rgba(0, 102, 204, 0.1);
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        
-        .testimonial-content {
-            position: relative;
-            z-index: 1;
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .testimonial-author img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-        }
-        
-        .author-info h4 {
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-        
-        .author-info p {
-            color: var(--gray);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--white);
-            text-align: center;
-            padding: 90px 0;
-        }
-        
-        .cta h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .cta .hero-btns {
-            gap: 25px;
-        }
-        
-        /* WhatsApp CTA Section */
-        .whatsapp-cta {
-            background: linear-gradient(135deg, var(--whatsapp), #128C7E);
-            color: var(--white);
-            text-align: center;
-            padding: 70px 0;
-        }
-        
-        .whatsapp-cta h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .whatsapp-cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* New Customer Section */
-        .new-customer {
-            background-color: var(--white);
-        }
-        
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .step {
-            text-align: center;
-            padding: 30px;
-            border-radius: 8px;
-            background-color: var(--light);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .step:hover {
-            transform: translateY(-5px);
-        }
-        
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            color: var(--white);
-            border-radius: 50%;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        
-        .step h3 {
-            margin-bottom: 15px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 70px 0 25px;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-        
-        .footer-col h3 {
-            color: var(--white);
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 12px;
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--secondary);
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: #b3b3b3;
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-        
-        .footer-links a:hover {
-            color: var(--white);
-            padding-left: 8px;
-        }
-        
-        .footer-contact li {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 18px;
-            color: #b3b3b3;
-            font-size: 0.95rem;
-        }
-        
-        .footer-contact i {
-            color: var(--secondary);
-            margin-top: 3px;
-            font-size: 1.1rem;
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-        
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            transition: var(--transition);
-            font-size: 1.1rem;
-        }
-        
-        .footer-social a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 25px;
-            text-align: center;
-            color: #b3b3b3;
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Menu Animation */
-        .mobile-menu-btn.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        
-        .mobile-menu-btn.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .cta h2 {
-                font-size: 2.5rem;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .hero {
-                padding: 120px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .section {
-                padding: 70px 0;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .cta h2 {
-                font-size: 2.2rem;
-            }
-            
-            .whatsapp-cta h2 {
-                font-size: 2rem;
-            }
-            
-            /* Mobile Menu Styles */
-            .mobile-menu-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .main-nav {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 320px;
-                height: 100vh;
-                background-color: white;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: right 0.4s ease;
-                padding: 5rem 2rem;
-                z-index: 1000;
-                overflow-y: auto;
-            }
-        
-            .main-nav.active {
-                right: 0;
-            }
-        
-            .main-nav ul {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .main-nav ul li a {
-                font-size: 1.1rem;
-                padding: 0.5rem 0;
-                display: block;
-            }
-            
-            .auth-btns {
-                flex-direction: column;
-                gap: 1rem;
-                margin-top: 2rem;
-            }
-            
-            .auth-btns .btn {
-                width: 100%;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            :root {
-                font-size: 14px;
-            }
-            
-            .top-bar .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .header-container {
-                flex-direction: row;
-                gap: 15px;
-                padding: 15px;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .package-tabs {
-                flex-wrap: wrap;
-            }
-            
-            .package-actions {
-                flex-direction: column;
-            }
-            
-            .cta h2 {
-                font-size: 2rem;
-            }
-            
-            .cta .hero-btns {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .footer-grid {
-                gap: 40px;
-            }
-            
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-            
-            .testimonial-author {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            
-            .testimonial-author img {
-                width: 50px;
-                height: 50px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            :root {
-                font-size: 13px;
-            }
-            
-            .hero {
-                padding: 100px 0 !important;
-            }
-            
-            .hero h1 {
-                font-size: 2rem !important;
-                line-height: 1.2 !important;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section-title {
-                font-size: 1.6rem !important;
-            }
-            
-            .testimonial::before {
-                font-size: 4rem;
-            }
-            
-            .cta h2 {
-                font-size: 1.8rem;
-            }
-            
-            .whatsapp-cta h2 {
-                font-size: 1.7rem;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .modal-content {
-                padding: 20px;
-                width: 95%;
-                margin: 10% auto;
-            }
-            
-            .payment-methods {
-                flex-direction: column;
-            }
-            
-            .payment-method {
-                margin-bottom: 10px;
-            }
-            
-            .testimonial {
-                padding: 30px 20px;
-            }
-            
-            .feature-card, .package-card, .coverage-area, .step {
-                padding: 20px !important;
-            }
-            
-            .footer-contact li {
-                flex-direction: column;
-                gap: 5px;
-            }
-            
-            .footer-contact i {
-                margin-top: 0;
-            }
-            
-            .package-header h3 {
-                font-size: 1.4rem !important;
-            }
-            
-            .package-price {
-                font-size: 1.8rem !important;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-contact">
-                <a href="tel:+254110062270"><i class="fas fa-phone"></i> 011 006 2270</a>
-                <a href="https://wa.me/254110062270"><i class="fab fa-whatsapp"></i> WhatsApp Primary</a>
-                <a href="https://wa.me/254758341950"><i class="fab fa-whatsapp"></i> WhatsApp Alternate</a>
-                <a href="mailto:info@fastnet.co.ke" class="email-link" style="display: inline-flex; align-items: center; gap: 8px; color: #0066cc; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
-                    <i class="fas fa-envelope" style="color: #ff6600;"></i> info@fastnet.co.ke
-                  </a>
-            </div>
-            <div class="top-bar-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Header -->
-    <header class="modern-header">
-        <div class="container header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Fastnet Fiber Logo">
-                <div class="logo-text">
-                    <h1>Fastnet Fiber</h1>
-                    <p>Fast. Reliable. Affordable.</p>
-                </div>
-            </div>
-            
-            <button class="mobile-menu-btn" aria-label="Mobile Menu">
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </button>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#home-packages" class="nav-link">Home Fiber</a></li>
-                    <li><a href="#business-packages" class="nav-link">Business Fiber</a></li>
-                    <li><a href="#coverage" class="nav-link">Coverage</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="auth-btns">
-                    <a href="#" class="btn btn-secondary hover-scale" id="login-btn">Login</a>
-                    <a href="#" class="btn hover-scale" id="register-btn">Register</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Ultra-Fast Fiber Internet in Kahawa Wendani</h1>
-            <p>Experience Kenya's most reliable high-speed fiber internet with dedicated support for your home or business.</p>
-            <div class="hero-btns">
-                <a href="#home-packages" class="btn btn-secondary">View Packages</a>
-                <a href="tel:+254110062270" class="btn">Call Now</a>
-                <a href="https://wa.me/254110062270" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="section features">
-        <div class="container">
-            <h2 class="section-title text-center">Why Choose Fastnet Fiber?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Lightning Fast Speeds</h3>
-                    <p>Enjoy symmetrical upload and download speeds with our premium fiber network.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>99.9% Uptime</h3>
-                    <p>Our redundant network ensures you stay connected when you need it most.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our local support team is always ready to assist you with any issues.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>No Hidden Fees</h3>
-                    <p>Transparent pricing with no surprise charges or long-term contracts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Packages Section -->
-    <section class="section packages" id="home-packages">
-        <div class="container">
-            <h2 class="section-title text-center">Our Internet Packages</h2>
-            
-            <div class="package-tabs">
-                <button class="tab-btn active" data-tab="home">Home Fiber</button>
-                <button class="tab-btn" data-tab="business">Business Fiber</button>
-            </div>
-            
-            <div class="package-grid" id="home-packages-container">
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Basic</h3>
-                        <p class="package-price">KES 1,500 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 5 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 5 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> 24/7 Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Basic" data-price="1500">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Basic%20package%20(5Mbps%20@KES1500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Standard</h3>
-                        <p class="package-price">KES 2,000 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 10 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 10 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> Priority Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Standard" data-price="2000">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Standard%20package%20(10Mbps%20@KES2000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Premium</h3>
-                        <p class="package-price">KES 3,000 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 15 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 15 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> Priority Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Premium" data-price="3000">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Premium%20package%20(15Mbps%20@KES3000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Ultra</h3>
-                        <p class="package-price">KES 4,000 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 20 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 20 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> VIP Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Ultra" data-price="4000">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Ultra%20package%20(20Mbps%20@KES4000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="package-grid" id="business-packages-container" style="display: none;">
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Lite</h3>
-                        <p class="package-price">KES 2,800 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 15 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 15 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> Business Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Lite" data-price="2800">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Lite%20package%20(15Mbps%20@KES2800)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Medium</h3>
-                        <p class="package-price">KES 4,500 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 30 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 30 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> Priority Business Support</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Medium" data-price="4500">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Medium%20package%20(30Mbps%20@KES4500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Fast</h3>
-                        <p class="package-price">KES 5,500 <span>/month</span></p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 50 Mbps Download</li>
-                            <li><i class="fas fa-check"></i> 50 Mbps Upload</li>
-                            <li><i class="fas fa-check"></i> Unlimited Data</li>
-                            <li><i class="fas fa-check"></i> Free Installation</li>
-                            <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-                        </ul>
-                        <div class="package-actions">
-                            <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Fast" data-price="5500">Pay Now</a>
-                            <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Fast%20package%20(50Mbps%20@KES5500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3>Custom</h3>
-                        <p class="package-price">Custom Quote</p>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 100+ Mbps Speeds</li>
-                            <li><i class="fas fa-check"></i> Dedicated Fiber Line</li>
-                            <li><i class="fas fa-check"></i> SLA Guarantee</li>
-                            <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
-                            <li><i class="fas fa-check"></i> Custom Solutions</li>
-                        </ul>
-                        <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20a%20Custom%20Business%20Solution" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> Contact Sales</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- New Customer Section -->
-    <section class="section new-customer">
-        <div class="container">
-            <h2 class="section-title text-center">New Customer? Get Connected in 3 Easy Steps</h2>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Choose Your Package</h3>
-                    <p>Select from our affordable home or business fiber packages that suit your needs.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Register Online</h3>
-                    <p>Fill out our simple registration form with your details and preferred installation date.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Get Connected</h3>
-                    <p>Our team will contact you to confirm and complete your installation within 24 hours.</p>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="#" class="btn btn-secondary" id="register-now-btn">Register Now</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Coverage Section -->
-    <section class="section coverage" id="coverage">
-        <div class="container">
-            <h2 class="section-title text-center">Our Coverage Areas</h2>
-            <p class="text-center">We currently serve the following areas in KAHAWA WENDANI with plans to expand to more locations soon.</p>
-            
-            <div class="coverage-areas">
-                <div class="coverage-area">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Kahawa wendani</h3>
-                    <p>Full fiber coverage</p>
-                </div>
-                
-                <div class="coverage-area">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Kahawa Sukari</h3>
-                    <p>Full fiber coverage</p>
-                </div>
-                
-                <div class="coverage-area">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Kahawa Baracks</h3>
-                    <p>Partial coverage</p>
-                </div>
-                
-                <div class="coverage-area">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Kahawa Sukari</h3>
-                    <p>Coming soon</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title text-center">What Our Customers Say</h2>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Fastnet Fiber has transformed how we work from home. The speeds are consistently fast and reliable, and their customer service is exceptional. Highly recommended!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Mwangi">
-                        <div class="author-info">
-                            <h4>John Mwangi</h4>
-                            <p>Home User, Kahawa wendani</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"As a small business owner, having reliable internet is crucial. Fastnet's business package has given us the stability we need at a reasonable price. No more downtime!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Kamau">
-                        <div class="author-info">
-                            <h4>Sarah Kamau</h4>
-                            <p>Business Owner, Kahawa wendani </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"The installation was quick and professional. We can now stream on multiple devices without buffering. The kids are happy with their online classes and games."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Ochieng">
-                        <div class="author-info">
-                            <h4>David Ochieng</h4>
-                            <p>Family User, Kahawa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- WhatsApp CTA Section -->
-    <section class="section whatsapp-cta">
-        <div class="container">
-            <h2>Get Instant Support via WhatsApp</h2>
-            <p>Our team is ready to assist you with any questions or connection requests.</p>
-            <div class="hero-btns">
-                <a href="https://wa.me/254110062270" class="btn btn-whatsapp" style="padding: 15px 30px;"><i class="fab fa-whatsapp"></i> Chat with Primary Number</a>
-                <a href="https://wa.me/254758341950" class="btn btn-whatsapp" style="padding: 15px 30px;"><i class="fab fa-whatsapp"></i> Chat with Alternate Number</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
-        <div class="container">
-            <h2>Ready to Experience Lightning Fast Internet?</h2>
-            <p>Join hundreds of satisfied customers enjoying Kenya's most reliable fiber internet service.</p>
-            <div class="hero-btns">
-                <a href="#home-packages" class="btn btn-secondary">View Packages</a>
-                <a href="tel:+254110062270" class="btn">Call Now</a>
-                <a href="https://wa.me/254110062270" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="logo">
-                        <img src="logo.png" alt="Fastnet Fiber Logo">
-                        <div class="logo-text">
-                            <h1 style="color: var(--white); margin-bottom: 5px;">Fastnet Fiber</h1>
-                            <p style="color: #b3b3b3;">Fast. Reliable. Affordable.</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 15px; color: #b3b3b3;">Kenya's premier fiber internet provider delivering reliable, high-speed connectivity to homes and businesses in Kahawa Wendani.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#home-packages">Home Fiber</a></li>
-                        <li><a href="#business-packages">Business Fiber</a></li>
-                        <li><a href="#coverage">Coverage Areas</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="speedtest.html">Speed Test</a></li>
-                        <li><a href="usage.html">Network Status</a></li>
-                        <li><a href="#">Payment Options</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Fastnet Kahawa Wendani</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>011 006 2270</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>0758 341 950</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <span><a href="https://wa.me/254110062270" style="color: #b3b3b3;">WhatsApp Primary</a></span>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <span><a href="https://wa.me/254758341950" style="color: #b3b3b3;">WhatsApp Alternate</a></span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 2:00 PM</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Fastnet Fiber Connections Limited. All Rights Reserved. | Designed By Hum</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Login Modal -->
-    <div class="modal" id="login-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">Customer Login</h2>
-            
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="login-email">Email Address</label>
-                    <input type="email" id="login-email" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-block">Login</button>
-                </div>
-                
-                <div class="text-center">
-                    <p>Don't have an account? <a href="#" id="switch-to-register">Register here</a></p>
-                    <p><a href="#" id="forgot-password">Forgot password?</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <!-- Register Modal -->
-    <div class="modal" id="register-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">New Customer Registration</h2>
-            
-            <form id="register-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" class="form-control" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="register-email">Email Address</label>
-                    <input type="email" id="register-email" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="address">Physical Address</label>
-                    <input type="text" id="address" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="package">Select Package</label>
-                    <select id="package" class="form-control" required>
-                        <option value="">-- Select Package --</option>
-                        <option value="Basic">Basic (5Mbps @ KES 1,500)</option>
-                        <option value="Standard">Standard (10Mbps @ KES 2,000)</option>
-                        <option value="Premium">Premium (15Mbps @ KES 3,000)</option>
-                        <option value="Ultra">Ultra (20Mbps @ KES 4,000)</option>
-                        <option value="Business Lite">Business Lite (15Mbps @ KES 2,800)</option>
-                        <option value="Business Medium">Business Medium (30Mbps @ KES 4,500)</option>
-                        <option value="Business Fast">Business Fast (50Mbps @ KES 5,500)</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="register-password">Create Password</label>
-                    <input type="password" id="register-password" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-block btn-secondary">Register Now</button>
-                </div>
-                
-                <div class="text-center">
-                    <p>Already have an account? <a href="#" id="switch-to-login">Login here</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <!-- Payment Modal -->
-    <div class="modal" id="payment-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">Make Payment</h2>
-            
-            <div id="payment-details">
-                <p>You are about to pay for:</p>
-                <h3 id="payment-package-name" style="margin-bottom: 5px;"></h3>
-                <p id="payment-package-price" style="font-size: 1.2rem; margin-bottom: 20px;"></p>
-            </div>
-            
-            <form id="payment-form">
-                <div class="form-group">
-                    <label>Payment Method</label>
-                    <div class="payment-methods">
-                        <div class="payment-method">
-                            <input type="radio" name="payment-method" id="mpesa" value="mpesa" checked>
-                            <label for="mpesa">
-                                <i class="fas fa-mobile-alt"></i>
-                                M-Pesa
-                            </label>
-                        </div>
-                        <div class="payment-method">
-                            <input type="radio" name="payment-method" id="card" value="card">
-                            <label for="card">
-                                <i class="far fa-credit-card"></i>
-                                Card
-                            </label>
-                        </div>
-                        <div class="payment-method">
-                            <input type="radio" name="payment-method" id="bank" value="bank">
-                            <label for="bank">
-                                <i class="fas fa-university"></i>
-                                Bank
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="mpesa-payment">
-                    <div class="form-group">
-                        <label for="mpesa-phone">M-Pesa Phone Number</label>
-                        <input type="tel" id="mpesa-phone" class="form-control" placeholder="e.g. 254712345678" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-secondary">Pay via M-Pesa</button>
-                    </div>
-                </div>
-                
-                <div id="card-payment" style="display: none;">
-                    <div class="form-group">
-                        <label for="card-number">Card Number</label>
-                        <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="expiry">Expiry Date</label>
-                            <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" class="form-control" placeholder="123">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="card-name">Name on Card</label>
-                        <input type="text" id="card-name" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-secondary">Pay with Card</button>
-                    </div>
-                </div>
-                
-                <div id="bank-payment" style="display: none;">
-                    <div class="form-group">
-                        <p>Please make a bank transfer to:</p>
-                        <p><strong>Bank:</strong> Equity Bank</p>
-                        <p><strong>Account Name:</strong> Fastnet Fiber Connections Ltd</p>
-                        <p><strong>Account Number:</strong> 1234567890</p>
-                        <p><strong>Branch:</strong> Ruiru</p>
-                        <p>Use your account number as the reference</p>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="payment-proof">Upload Payment Proof</label>
-                        <input type="file" id="payment-proof" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-secondary">Submit Proof</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <!-- Dashboard Modal (for demo purposes) -->
-    <div class="modal" id="dashboard-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">Customer Dashboard</h2>
-            
-            <div class="dashboard-header">
-                <div class="container">
-                    <div class="user-info">
-                        <div class="user-avatar">JM</div>
-                        <div class="user-details">
-                            <h3>John Mwangi</h3>
-                            <p>Account: #FASTNET-00123</p>
-                            <p>Package: Premium (15Mbps)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="dashboard-nav">
-                        <ul>
-                            <li><a href="#" class="active">Dashboard</a></li>
-                            <li><a href="#">Payments</a></li>
-                            <li><a href="#">Usage</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="dashboard-content">
-                <h3>Account Overview</h3>
-                <p>Welcome back, John! Here's a quick overview of your account.</p>
-                
-                <div class="features-grid" style="margin-top: 30px;">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <h3>Connection Status</h3>
-                        <p><strong style="color: var(--success);">Active</strong></p>
-                        <p>Expires: 30th June 2025</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Uptime</h3>
-                        <p><strong>99.8%</strong> this month</p>
-                        <p>Last outage: 5 minutes on 15th June</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <h3>Usage</h3>
-                        <p><strong>156GB</strong> used this month</p>
-                        <p>Unlimited data remaining</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <h3>Billing</h3>
-                        <p>Next payment: <strong>KES 3,000</strong></p>
-                        <p>Due: 25th June 2025</p>
-                        <a href="#" class="btn btn-secondary btn-block" style="margin-top: 15px;">Pay Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        // Simple tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Hide all package grids
-                    document.getElementById('home-packages-container').style.display = 'none';
-                    document.getElementById('business-packages-container').style.display = 'none';
-                    
-                    // Show the selected package grid
-                    const tab = this.getAttribute('data-tab');
-                    if (tab === 'home') {
-                        document.getElementById('home-packages-container').style.display = 'grid';
-                    } else {
-                        document.getElementById('business-packages-container').style.display = 'grid';
-                    }
-                });
-            });
-            
-            // Mobile menu toggle functionality
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const mainNav = document.querySelector('.main-nav');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                mainNav.classList.toggle('active');
-                
-                // Toggle body scroll when menu is open
-                if (mainNav.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            // Close menu when clicking on nav links
-            document.querySelectorAll('.main-nav a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuBtn.classList.remove('active');
-                    mainNav.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Modal functionality
-            const loginModal = document.getElementById('login-modal');
-            const registerModal = document.getElementById('register-modal');
-            const paymentModal = document.getElementById('payment-modal');
-            const dashboardModal = document.getElementById('dashboard-modal');
-            
-            const loginBtn = document.getElementById('login-btn');
-            const registerBtn = document.getElementById('register-btn');
-            const registerNowBtn = document.getElementById('register-now-btn');
-            const payNowBtns = document.querySelectorAll('.pay-now-btn');
-            const closeModalBtns = document.querySelectorAll('.close-modal');
-            
-            const switchToRegister = document.getElementById('switch-to-register');
-            const switchToLogin = document.getElementById('switch-to-login');
-            
-            // Payment method toggle
-            const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
-            const mpesaPayment = document.getElementById('mpesa-payment');
-            const cardPayment = document.getElementById('card-payment');
-            const bankPayment = document.getElementById('bank-payment');
-            
-            paymentMethods.forEach(method => {
-                method.addEventListener('change', function() {
-                    mpesaPayment.style.display = 'none';
-                    cardPayment.style.display = 'none';
-                    bankPayment.style.display = 'none';
-                    
-                    if (this.value === 'mpesa') {
-                        mpesaPayment.style.display = 'block';
-                    } else if (this.value === 'card') {
-                        cardPayment.style.display = 'block';
-                    } else {
-                        bankPayment.style.display = 'block';
-                    }
-                });
-            });
-            
-            // Open modals
-            loginBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'block';
-            });
-            
-            registerBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                registerModal.style.display = 'block';
-            });
-            
-            registerNowBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                registerModal.style.display = 'block';
-            });
-            
-            payNowBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const packageName = this.getAttribute('data-package');
-                    const packagePrice = this.getAttribute('data-price');
-                    
-                    document.getElementById('payment-package-name').textContent = packageName;
-                    document.getElementById('payment-package-price').textContent = `KES ${packagePrice}/month`;
-                    
-                    paymentModal.style.display = 'block';
-                });
-            });
-            
-            // Close modals
-            closeModalBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    loginModal.style.display = 'none';
-                    registerModal.style.display = 'none';
-                    paymentModal.style.display = 'none';
-                    dashboardModal.style.display = 'none';
-                });
-            });
-            
-            // Switch between login and register
-            switchToRegister.addEventListener('click', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'none';
-                registerModal.style.display = 'block';
-            });
-            
-            switchToLogin.addEventListener('click', function(e) {
-                e.preventDefault();
-                registerModal.style.display = 'none';
-                loginModal.style.display = 'block';
-            });
-            
-            // Close modal when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === loginModal) {
-                    loginModal.style.display = 'none';
-                }
-                if (e.target === registerModal) {
-                    registerModal.style.display = 'none';
-                }
-                if (e.target === paymentModal) {
-                    paymentModal.style.display = 'none';
-                }
-                if (e.target === dashboardModal) {
-                    dashboardModal.style.display = 'none';
-                }
-            });
-            
-            // Form submissions (demo purposes)
-            document.getElementById('login-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                loginModal.style.display = 'none';
-                dashboardModal.style.display = 'block';
-            });
-            
-            document.getElementById('register-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const firstName = document.getElementById('first-name').value;
-                const lastName = document.getElementById('last-name').value;
-                const email = document.getElementById('register-email').value;
-                const phone = document.getElementById('phone').value;
-                const address = document.getElementById('address').value;
-                const package = document.getElementById('package').value;
-                
-                // Construct WhatsApp message
-                const message = `New Customer Registration:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nPackage: ${package}\n\nPlease contact for installation.`;
-                
-                // Encode for WhatsApp URL
-                const encodedMessage = encodeURIComponent(message);
-                
-                // Close modal and open WhatsApp
-                registerModal.style.display = 'none';
-                window.open(`https://wa.me/254110062270?text=${encodedMessage}`, '_blank');
-                
-                // Show success message (in a real app, you would save to database first)
-                alert('Registration successful! Our team will contact you shortly for installation.');
-            });
-            
-            document.getElementById('payment-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get selected payment method
-                const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
-                
-                if (paymentMethod === 'mpesa') {
-                    const phone = document.getElementById('mpesa-phone').value;
-                    
-                    // In a real implementation, you would call Daraja API here
-                    alert(`STK Push sent to ${phone}. Please complete payment on your phone.`);
-                    
-                    // For demo, we'll just show a success message
-                    setTimeout(() => {
-                        paymentModal.style.display = 'none';
-                        alert('Payment successful! Thank you for your payment.');
-                    }, 2000);
-                } else if (paymentMethod === 'card') {
-                    // In a real implementation, you would process card payment
-                    alert('Card payment would be processed here with a payment gateway.');
-                } else {
-                    // Bank transfer
-                    alert('Please complete your bank transfer and upload proof.');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <title>Fastnet Fiber | Affordable Fiber Internet in KAHAWA WENDANI</title>
+     <meta name="description" content="Fastnet Fiber offers affordable, fast, and reliable fiber internet with daytime support. Get connected within 24 hours with free installation!">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <style>
+         :root {
+             --primary: #0066cc;
+             --primary-dark: #004d99;
+             --secondary: #ff6600;
+             --dark: #333333;
+             --light: #f8f9fa;
+             --gray: #6c757d;
+             --success: #28a745;
+             --white: #ffffff;
+             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+             --transition: all 0.3s ease;
+             --whatsapp: #25D366;
+             --danger: #dc3545;
+         }
+ 
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         body {
+             font-family: 'Poppins', sans-serif;
+             line-height: 1.6;
+             color: var(--dark);
+             background-color: var(--light);
+             overflow-x: hidden;
+             max-width: 100%;
+         }
+ 
+         h1, h2, h3, h4, h5, h6 {
+             font-weight: 600;
+             line-height: 1.2;
+             margin-bottom: 1rem;
+         }
+ 
+         p {
+             margin-bottom: 1rem;
+         }
+ 
+         a {
+             text-decoration: none;
+             color: var(--primary);
+             transition: var(--transition);
+             -webkit-tap-highlight-color: transparent;
+         }
+ 
+         a:hover {
+             color: var(--secondary);
+         }
+ 
+         img {
+             max-width: 100%;
+             height: auto;
+         }
+ 
+         ul {
+             list-style: none;
+         }
+ 
+         .container {
+             width: 100%;
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 0 20px;
+         }
+ 
+         .btn {
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             padding: 12px 24px;
+             background-color: var(--primary);
+             color: var(--white);
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             font-weight: 500;
+             transition: var(--transition);
+             text-align: center;
+             font-size: 1rem;
+             min-height: 44px;
+             -webkit-tap-highlight-color: transparent;
+         }
+ 
+         .btn:hover {
+             background-color: var(--primary-dark);
+             color: var(--white);
+             transform: translateY(-2px);
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+         }
+ 
+         .btn:active {
+             transform: scale(0.98);
+         }
+ 
+         .btn-secondary {
+             background-color: var(--secondary);
+         }
+ 
+         .btn-secondary:hover {
+             background-color: #e65c00;
+         }
+ 
+         .btn-whatsapp {
+             background-color: var(--whatsapp);
+             color: var(--white);
+         }
+ 
+         .btn-whatsapp:hover {
+             background-color: #128C7E;
+         }
+ 
+         .btn-danger {
+             background-color: var(--danger);
+         }
+ 
+         .btn-danger:hover {
+             background-color: #c82333;
+         }
+ 
+         .btn-block {
+             display: block;
+             width: 100%;
+         }
+ 
+         .text-center {
+             text-align: center;
+         }
+ 
+         .text-primary {
+             color: var(--primary);
+         }
+ 
+         .text-secondary {
+             color: var(--secondary);
+         }
+ 
+         .text-danger {
+             color: var(--danger);
+         }
+ 
+         .section {
+             padding: 80px 0;
+         }
+ 
+         .section-title {
+             position: relative;
+             margin-bottom: 50px;
+             font-size: 2.2rem;
+         }
+ 
+         .section-title::after {
+             content: '';
+             position: absolute;
+             bottom: -10px;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 80px;
+             height: 3px;
+             background-color: var(--secondary);
+         }
+ 
+         /* Modal Styles */
+         .modal {
+             display: none;
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-color: rgba(0, 0, 0, 0.7);
+             z-index: 2000;
+             overflow-y: auto;
+         }
+ 
+         .modal-content {
+             background-color: var(--white);
+             margin: 5% auto;
+             padding: 30px;
+             border-radius: 8px;
+             width: 90%;
+             max-width: 600px;
+             box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+             position: relative;
+             animation: modalOpen 0.4s ease;
+         }
+ 
+         @keyframes modalOpen {
+             from {
+                 opacity: 0;
+                 transform: translateY(-50px);
+             }
+             to {
+                 opacity: 1;
+                 transform: translateY(0);
+             }
+         }
+ 
+         .close-modal {
+             position: absolute;
+             top: 15px;
+             right: 15px;
+             font-size: 1.5rem;
+             color: var(--gray);
+             cursor: pointer;
+             transition: var(--transition);
+         }
+ 
+         .close-modal:hover {
+             color: var(--dark);
+         }
+ 
+         .modal-title {
+             margin-bottom: 20px;
+             color: var(--primary);
+         }
+ 
+         /* Form Styles */
+         .form-group {
+             margin-bottom: 20px;
+         }
+ 
+         .form-group label {
+             display: block;
+             margin-bottom: 8px;
+             font-weight: 500;
+         }
+ 
+         .form-control {
+             width: 100%;
+             padding: 12px 15px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+             font-family: 'Poppins', sans-serif;
+             font-size: 1rem;
+             transition: var(--transition);
+             min-height: 44px;
+             font-size: 16px;
+             -webkit-appearance: none;
+         }
+ 
+         .form-control:focus {
+             border-color: var(--primary);
+             outline: none;
+             box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+         }
+ 
+         .form-row {
+             display: flex;
+             gap: 20px;
+         }
+ 
+         .form-row .form-group {
+             flex: 1;
+         }
+ 
+         /* Auth Forms */
+         .auth-container {
+             max-width: 500px;
+             margin: 0 auto;
+             background-color: var(--white);
+             padding: 40px;
+             border-radius: 8px;
+             box-shadow: var(--shadow);
+         }
+ 
+         .auth-header {
+             text-align: center;
+             margin-bottom: 30px;
+         }
+ 
+         .auth-header h2 {
+             color: var(--primary);
+         }
+ 
+         .auth-footer {
+             text-align: center;
+             margin-top: 20px;
+         }
+ 
+         /* User Dashboard */
+         .dashboard-header {
+             background-color: var(--primary);
+             color: var(--white);
+             padding: 20px 0;
+             margin-bottom: 40px;
+         }
+ 
+         .user-info {
+             display: flex;
+             align-items: center;
+             gap: 20px;
+         }
+ 
+         .user-avatar {
+             width: 80px;
+             height: 80px;
+             border-radius: 50%;
+             background-color: var(--light);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 2rem;
+             color: var(--primary);
+             font-weight: bold;
+         }
+ 
+         .user-details h3 {
+             color: var(--white);
+             margin-bottom: 5px;
+         }
+ 
+         .user-details p {
+             color: rgba(255, 255, 255, 0.8);
+             margin-bottom: 0;
+         }
+ 
+         .dashboard-nav {
+             margin-top: 20px;
+         }
+ 
+         .dashboard-nav ul {
+             display: flex;
+             gap: 15px;
+         }
+ 
+         .dashboard-nav a {
+             color: rgba(255, 255, 255, 0.8);
+             padding: 8px 15px;
+             border-radius: 4px;
+             transition: var(--transition);
+         }
+ 
+         .dashboard-nav a:hover, .dashboard-nav a.active {
+             color: var(--white);
+             background-color: rgba(255, 255, 255, 0.1);
+         }
+ 
+         .dashboard-content {
+             background-color: var(--white);
+             padding: 30px;
+             border-radius: 8px;
+             box-shadow: var(--shadow);
+             margin-bottom: 30px;
+         }
+ 
+         /* Payment Form */
+         .payment-methods {
+             display: flex;
+             gap: 15px;
+             margin-bottom: 20px;
+         }
+ 
+         .payment-method {
+             flex: 1;
+             text-align: center;
+         }
+ 
+         .payment-method input {
+             display: none;
+         }
+ 
+         .payment-method label {
+             display: block;
+             padding: 15px;
+             border: 2px solid #ddd;
+             border-radius: 8px;
+             cursor: pointer;
+             transition: var(--transition);
+             -webkit-tap-highlight-color: transparent;
+         }
+ 
+         .payment-method input:checked + label {
+             border-color: var(--primary);
+             background-color: rgba(0, 102, 204, 0.1);
+         }
+ 
+         .payment-method i {
+             font-size: 2rem;
+             margin-bottom: 10px;
+             display: block;
+             color: var(--primary);
+         }
+ 
+         /* Header */
+         .top-bar {
+             background-color: var(--dark);
+             color: var(--white);
+             padding: 10px 0;
+             font-size: 0.9rem;
+         }
+ 
+         .top-bar .container {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             flex-wrap: wrap;
+         }
+ 
+         .top-bar-contact {
+             display: flex;
+             gap: 20px;
+             flex-wrap: wrap;
+         }
+ 
+         .top-bar-contact a {
+             color: var(--white);
+             display: flex;
+             align-items: center;
+             gap: 8px;
+         }
+ 
+         .top-bar-social {
+             display: flex;
+             gap: 15px;
+         }
+ 
+         .top-bar-social a {
+             color: var(--white);
+             font-size: 1rem;
+             transition: var(--transition);
+         }
+ 
+         .top-bar-social a:hover {
+             transform: translateY(-2px);
+         }
+ 
+         header {
+             background-color: var(--white);
+             box-shadow: var(--shadow);
+             position: sticky;
+             top: 0;
+             z-index: 1000;
+         }
+ 
+         .header-container {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: 15px 0;
+         }
+ 
+         .logo {
+             display: flex;
+             align-items: center;
+             gap: 15px;
+         }
+ 
+         .logo img {
+             height: 190px;
+             width: auto;
+             border: none;         /* removes any border */
+             outline: none;        /* removes any focus outline */
+             background: none;     /* removes any background if it's showing */
+             box-shadow: none; 
+             display: block;
+             box-shadow: none;
+         
+ 
+         }
+ 
+         .logo-text h1 {
+             font-size: 1.8rem;
+             margin-bottom: 5px;
+             color: var(--primary);
+         }
+ 
+         .logo-text p {
+             font-size: 0.9rem;
+             color: var(--gray);
+             margin-bottom: 0;
+         }
+ 
+         /* Modern Header Styles */
+         .modern-header {
+             background-color: rgba(255, 255, 255, 0.98);
+             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+             backdrop-filter: blur(8px);
+             -webkit-backdrop-filter: blur(8px);
+             position: sticky;
+             top: 0;
+             z-index: 1000;
+             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+         }
+ 
+         .modern-header:hover {
+             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+         }
+ 
+         .logo:hover {
+             transform: translateX(5px);
+         }
+ 
+         .logo:hover img {
+             transform: rotate(-5deg);
+         }
+ 
+         .logo-text h1 {
+             background: linear-gradient(90deg, #0066cc 0%, #004d99 100%);
+             -webkit-background-clip: text;
+             background-clip: text;
+             -webkit-text-fill-color: transparent;
+         }
+ 
+         .main-nav ul {
+             display: flex;
+             gap: 1.5rem;
+             list-style: none;
+         }
+ 
+         .nav-link {
+             color: #333;
+             font-weight: 500;
+             position: relative;
+             padding: 0.5rem 0;
+             transition: all 0.3s ease;
+         }
+ 
+         .nav-link::after {
+             content: '';
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             width: 0;
+             height: 2px;
+             background: linear-gradient(90deg, #0066cc 0%, #ff6600 100%);
+             transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+         }
+ 
+         .nav-link:hover::after {
+             width: 100%;
+         }
+ 
+         .nav-link.active {
+             color: #0066cc;
+             font-weight: 600;
+         }
+ 
+         .nav-link.active::after {
+             width: 100%;
+         }
+ 
+         .auth-btns {
+             display: flex;
+             gap: 1rem;
+         }
+ 
+         .hover-scale {
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+ 
+         .hover-scale:hover {
+             transform: translateY(-2px);
+             box-shadow: 0 6px 12px rgba(0, 102, 204, 0.15);
+         }
+ 
+         /* Mobile Menu Styles */
+         .mobile-menu-btn {
+             display: none;
+             background: none;
+             border: none;
+             cursor: pointer;
+             padding: 0.5rem;
+             z-index: 1001;
+         }
+ 
+         .hamburger {
+             display: flex;
+             flex-direction: column;
+             gap: 0.35rem;
+             width: 1.75rem;
+         }
+ 
+         .bar {
+             height: 3px;
+             width: 100%;
+             background-color: var(--primary);
+             border-radius: 2px;
+             transition: all 0.3s ease;
+         }
+ 
+         /* Hero Section */
+         .hero {
+             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+             color: var(--white);
+             padding: 140px 0;
+             text-align: center;
+         }
+ 
+         .hero h1 {
+             font-size: 3.2rem;
+             margin-bottom: 20px;
+             line-height: 1.3;
+         }
+ 
+         .hero p {
+             font-size: 1.3rem;
+             max-width: 800px;
+             margin: 0 auto 40px;
+             opacity: 0.9;
+         }
+ 
+         .hero-btns {
+             display: flex;
+             gap: 20px;
+             justify-content: center;
+             flex-wrap: wrap;
+         }
+ 
+         /* Features Section */
+         .features {
+             background-color: var(--white);
+         }
+ 
+         .features-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 30px;
+         }
+ 
+         .feature-card {
+             background-color: var(--light);
+             padding: 35px 25px;
+             border-radius: 8px;
+             text-align: center;
+             transition: var(--transition);
+             box-shadow: var(--shadow);
+         }
+ 
+         .feature-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+         }
+ 
+         .feature-icon {
+             font-size: 2.8rem;
+             color: var(--primary);
+             margin-bottom: 25px;
+         }
+ 
+         .feature-card h3 {
+             font-size: 1.4rem;
+             margin-bottom: 15px;
+         }
+ 
+         .feature-card p {
+             font-size: 1rem;
+             color: var(--gray);
+         }
+ 
+         /* Packages Section */
+         .packages {
+             background-color: var(--light);
+         }
+ 
+         .package-tabs {
+             display: flex;
+             justify-content: center;
+             margin-bottom: 40px;
+             gap: 15px;
+         }
+ 
+         .tab-btn {
+             padding: 12px 30px;
+             background-color: var(--white);
+             border: 1px solid var(--primary);
+             color: var(--primary);
+             border-radius: 4px;
+             cursor: pointer;
+             transition: var(--transition);
+             font-weight: 500;
+             font-size: 1rem;
+             min-height: 44px;
+         }
+ 
+         .tab-btn.active {
+             background-color: var(--primary);
+             color: var(--white);
+         }
+ 
+         .tab-btn:hover:not(.active) {
+             background-color: rgba(0, 102, 204, 0.1);
+         }
+ 
+         .package-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 30px;
+         }
+ 
+         .package-card {
+             background-color: var(--white);
+             border-radius: 8px;
+             overflow: hidden;
+             box-shadow: var(--shadow);
+             transition: var(--transition);
+         }
+ 
+         .package-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+         }
+ 
+         .package-header {
+             background-color: var(--secondary);
+             color: var(--white);
+             padding: 25px 20px;
+             text-align: center;
+         }
+ 
+         .package-header h3 {
+             font-size: 1.6rem;
+             margin-bottom: 5px;
+         }
+ 
+         .package-price {
+             font-size: 2.2rem;
+             font-weight: 700;
+             margin-bottom: 0;
+         }
+ 
+         .package-price span {
+             font-size: 1rem;
+             font-weight: 400;
+         }
+ 
+         .package-body {
+             padding: 30px;
+         }
+ 
+         .package-features {
+             margin-bottom: 30px;
+         }
+ 
+         .package-features li {
+             padding: 10px 0;
+             border-bottom: 1px solid #eee;
+             display: flex;
+             align-items: center;
+             gap: 12px;
+             font-size: 0.95rem;
+         }
+ 
+         .package-features li:last-child {
+             border-bottom: none;
+         }
+ 
+         .package-features li i {
+             color: var(--success);
+             font-size: 1.1rem;
+         }
+ 
+         .package-actions {
+             display: flex;
+             gap: 10px;
+         }
+ 
+         /* Coverage Section */
+         .coverage {
+             background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+             background-attachment: fixed;
+         }
+ 
+         .coverage-areas {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+             gap: 25px;
+             margin-top: 40px;
+         }
+ 
+         .coverage-area {
+             background-color: rgba(255, 255, 255, 0.95);
+             padding: 25px 20px;
+             border-radius: 8px;
+             text-align: center;
+             box-shadow: var(--shadow);
+             transition: var(--transition);
+         }
+ 
+         .coverage-area:hover {
+             transform: translateY(-5px);
+         }
+ 
+         .coverage-area i {
+             font-size: 2.2rem;
+             color: var(--primary);
+             margin-bottom: 15px;
+         }
+ 
+         .coverage-area h3 {
+             font-size: 1.3rem;
+             margin-bottom: 5px;
+         }
+ 
+         /* Testimonials */
+         .testimonials {
+             background-color: var(--white);
+         }
+ 
+         .testimonial-slider {
+             max-width: 900px;
+             margin: 0 auto;
+         }
+ 
+         .testimonial {
+             background-color: var(--light);
+             padding: 40px;
+             border-radius: 8px;
+             margin: 20px;
+             box-shadow: var(--shadow);
+             position: relative;
+         }
+ 
+         .testimonial::before {
+             content: '\201C';
+             font-size: 5rem;
+             color: rgba(0, 102, 204, 0.1);
+             position: absolute;
+             top: 10px;
+             left: 10px;
+         }
+ 
+         .testimonial-content {
+             position: relative;
+             z-index: 1;
+             margin-bottom: 25px;
+             font-size: 1.1rem;
+             line-height: 1.7;
+         }
+ 
+         .testimonial-author {
+             display: flex;
+             align-items: center;
+             gap: 20px;
+         }
+ 
+         .testimonial-author img {
+             width: 70px;
+             height: 70px;
+             border-radius: 50%;
+             object-fit: cover;
+             border: 3px solid var(--primary);
+         }
+ 
+         .author-info h4 {
+             margin-bottom: 5px;
+             font-size: 1.2rem;
+         }
+ 
+         .author-info p {
+             color: var(--gray);
+             margin-bottom: 0;
+             font-size: 0.95rem;
+         }
+ 
+         /* CTA Section */
+         .cta {
+             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+             color: var(--white);
+             text-align: center;
+             padding: 90px 0;
+         }
+ 
+         .cta h2 {
+             font-size: 2.8rem;
+             margin-bottom: 20px;
+         }
+ 
+         .cta p {
+             max-width: 700px;
+             margin: 0 auto 40px;
+             font-size: 1.2rem;
+             opacity: 0.9;
+         }
+ 
+         .cta .hero-btns {
+             gap: 25px;
+         }
+ 
+         /* WhatsApp CTA Section */
+         .whatsapp-cta {
+             background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+             color: var(--white);
+             text-align: center;
+             padding: 70px 0;
+         }
+ 
+         .whatsapp-cta h2 {
+             font-size: 2.2rem;
+             margin-bottom: 20px;
+         }
+ 
+         .whatsapp-cta p {
+             max-width: 700px;
+             margin: 0 auto 30px;
+             font-size: 1.1rem;
+             opacity: 0.9;
+         }
+ 
+         /* New Customer Section */
+         .new-customer {
+             background-color: var(--white);
+         }
+ 
+         .steps {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 30px;
+             margin-top: 40px;
+         }
+ 
+         .step {
+             text-align: center;
+             padding: 30px;
+             border-radius: 8px;
+             background-color: var(--light);
+             box-shadow: var(--shadow);
+             transition: var(--transition);
+         }
+ 
+         .step:hover {
+             transform: translateY(-5px);
+         }
+ 
+         .step-number {
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             width: 60px;
+             height: 60px;
+             background-color: var(--primary);
+             color: var(--white);
+             border-radius: 50%;
+             font-size: 1.5rem;
+             font-weight: bold;
+             margin-bottom: 20px;
+         }
+ 
+         .step h3 {
+             margin-bottom: 15px;
+         }
+ 
+         /* Footer */
+         footer {
+             background-color: var(--dark);
+             color: var(--white);
+             padding: 70px 0 25px;
+         }
+ 
+         .footer-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 50px;
+             margin-bottom: 50px;
+         }
+ 
+         .footer-col h3 {
+             color: var(--white);
+             margin-bottom: 25px;
+             font-size: 1.3rem;
+             position: relative;
+             padding-bottom: 12px;
+         }
+ 
+         .footer-col h3::after {
+             content: '';
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             width: 50px;
+             height: 3px;
+             background-color: var(--secondary);
+         }
+ 
+         .footer-links li {
+             margin-bottom: 12px;
+         }
+ 
+         .footer-links a {
+             color: #b3b3b3;
+             transition: var(--transition);
+             font-size: 0.95rem;
+         }
+ 
+         .footer-links a:hover {
+             color: var(--white);
+             padding-left: 8px;
+         }
+ 
+         .footer-contact li {
+             display: flex;
+             align-items: flex-start;
+             gap: 15px;
+             margin-bottom: 18px;
+             color: #b3b3b3;
+             font-size: 0.95rem;
+         }
+ 
+         .footer-contact i {
+             color: var(--secondary);
+             margin-top: 3px;
+             font-size: 1.1rem;
+         }
+ 
+         .footer-social {
+             display: flex;
+             gap: 15px;
+             margin-top: 25px;
+         }
+ 
+         .footer-social a {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             width: 45px;
+             height: 45px;
+             background-color: rgba(255, 255, 255, 0.1);
+             border-radius: 50%;
+             color: var(--white);
+             transition: var(--transition);
+             font-size: 1.1rem;
+         }
+ 
+         .footer-social a:hover {
+             background-color: var(--secondary);
+             transform: translateY(-3px);
+         }
+ 
+         .footer-bottom {
+             border-top: 1px solid rgba(255, 255, 255, 0.1);
+             padding-top: 25px;
+             text-align: center;
+             color: #b3b3b3;
+             font-size: 0.9rem;
+         }
+ 
+         /* Mobile Menu Animation */
+         .mobile-menu-btn.active .bar:nth-child(1) {
+             transform: translateY(8px) rotate(45deg);
+         }
+ 
+         .mobile-menu-btn.active .bar:nth-child(2) {
+             opacity: 0;
+         }
+ 
+         .mobile-menu-btn.active .bar:nth-child(3) {
+             transform: translateY(-8px) rotate(-45deg);
+         }
+ 
+         /* Responsive Design */
+         @media (max-width: 1200px) {
+             .hero h1 {
+                 font-size: 2.8rem;
+             }
+ 
+             .cta h2 {
+                 font-size: 2.5rem;
+             }
+         }
+ 
+         @media (max-width: 992px) {
+             .hero {
+                 padding: 120px 0;
+             }
+ 
+             .hero h1 {
+                 font-size: 2.5rem;
+             }
+ 
+             .hero p {
+                 font-size: 1.2rem;
+             }
+ 
+             .section {
+                 padding: 70px 0;
+             }
+ 
+             .section-title {
+                 font-size: 2rem;
+             }
+ 
+             .cta h2 {
+                 font-size: 2.2rem;
+             }
+ 
+             .whatsapp-cta h2 {
+                 font-size: 2rem;
+             }
+ 
+             /* Mobile Menu Styles */
+             .mobile-menu-btn {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+ 
+             .main-nav {
+                 position: fixed;
+                 top: 0;
+                 right: -100%;
+                 width: 80%;
+                 max-width: 320px;
+                 height: 100vh;
+                 background-color: white;
+                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                 transition: right 0.4s ease;
+                 padding: 5rem 2rem;
+                 z-index: 1000;
+                 overflow-y: auto;
+             }
+ 
+             .main-nav.active {
+                 right: 0;
+             }
+ 
+             .main-nav ul {
+                 flex-direction: column;
+                 gap: 2rem;
+             }
+ 
+             .main-nav ul li a {
+                 font-size: 1.1rem;
+                 padding: 0.5rem 0;
+                 display: block;
+             }
+ 
+             .auth-btns {
+                 flex-direction: column;
+                 gap: 1rem;
+                 margin-top: 2rem;
+             }
+ 
+             .auth-btns .btn {
+                 width: 100%;
+             }
+         }
+ 
+         @media (max-width: 768px) {
+             :root {
+                 font-size: 14px;
+             }
+ 
+             .top-bar .container {
+                 flex-direction: column;
+                 gap: 15px;
+             }
+ 
+             .header-container {
+                 flex-direction: row;
+                 gap: 15px;
+                 padding: 15px;
+             }
+ 
+             .hero-btns {
+                 flex-direction: column;
+                 align-items: center;
+                 gap: 15px;
+             }
+ 
+             .hero h1 {
+                 font-size: 2.2rem;
+             }
+ 
+             .hero p {
+                 font-size: 1.1rem;
+             }
+ 
+             .section-title {
+                 font-size: 1.8rem;
+             }
+ 
+             .package-tabs {
+                 flex-wrap: wrap;
+             }
+ 
+             .package-actions {
+                 flex-direction: column;
+             }
+ 
+             .cta h2 {
+                 font-size: 2rem;
+             }
+ 
+             .cta .hero-btns {
+                 flex-direction: column;
+                 gap: 15px;
+             }
+ 
+             .footer-grid {
+                 gap: 40px;
+             }
+ 
+             .form-row {
+                 flex-direction: column;
+                 gap: 0;
+             }
+ 
+             .testimonial-author {
+                 flex-direction: column;
+                 align-items: flex-start;
+                 gap: 10px;
+             }
+ 
+             .testimonial-author img {
+                 width: 50px;
+                 height: 50px;
+             }
+         }
+ 
+         @media (max-width: 576px) {
+             :root {
+                 font-size: 13px;
+             }
+ 
+             .hero {
+                 padding: 100px 0 !important;
+             }
+ 
+             .hero h1 {
+                 font-size: 2rem !important;
+                 line-height: 1.2 !important;
+             }
+ 
+             .section {
+                 padding: 60px 0;
+             }
+ 
+             .section-title {
+                 font-size: 1.6rem !important;
+             }
+ 
+             .testimonial::before {
+                 font-size: 4rem;
+             }
+ 
+             .cta h2 {
+                 font-size: 1.8rem;
+             }
+ 
+             .whatsapp-cta h2 {
+                 font-size: 1.7rem;
+             }
+ 
+             .footer-grid {
+                 grid-template-columns: 1fr;
+                 gap: 30px;
+             }
+ 
+             .modal-content {
+                 padding: 20px;
+                 width: 95%;
+                 margin: 10% auto;
+             }
+ 
+             .payment-methods {
+                 flex-direction: column;
+             }
+ 
+             .payment-method {
+                 margin-bottom: 10px;
+             }
+ 
+             .testimonial {
+                 padding: 30px 20px;
+             }
+ 
+             .feature-card, .package-card, .coverage-area, .step {
+                 padding: 20px !important;
+             }
+ 
+             .footer-contact li {
+                 flex-direction: column;
+                 gap: 5px;
+             }
+ 
+             .footer-contact i {
+                 margin-top: 0;
+             }
+ 
+             .package-header h3 {
+                 font-size: 1.4rem !important;
+             }
+ 
+             .package-price {
+                 font-size: 1.8rem !important;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <!-- Top Bar -->
+     <div class="top-bar">
+         <div class="container">
+             <div class="top-bar-contact">
+                 <a href="tel:+254110062270"><i class="fas fa-phone"></i> 011 006 2270</a>
+                 <a href="https://wa.me/254110062270"><i class="fab fa-whatsapp"></i> WhatsApp Primary</a>
+                 <a href="https://wa.me/254758341950"><i class="fab fa-whatsapp"></i> WhatsApp Alternate</a>
+                 <a href="mailto:info@fastnet.co.ke" class="email-link" style="display: inline-flex; align-items: center; gap: 8px; color: #0066cc; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                     <i class="fas fa-envelope" style="color: #ff6600;"></i> info@fastnet.co.ke
+                   </a>
+             </div>
+             <div class="top-bar-social">
+                 <a href="#"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Header -->
+     <header class="modern-header">
+         <div class="container header-container">
+             <div class="logo">
+                 <img src="logo.png" alt="Fastnet Fiber Logo">
+                 <div class="logo-text">
+                     <h1>Fastnet Fiber</h1>
+                     <p>Fast. Reliable. Affordable.</p>
+                 </div>
+             </div>
+ 
+             <button class="mobile-menu-btn" aria-label="Mobile Menu">
+                 <div class="hamburger">
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                 </div>
+             </button>
+ 
+             <nav class="main-nav">
+                 <ul>
+                     <li><a href="#" class="nav-link active">Home</a></li>
+                     <li><a href="#home-packages" class="nav-link">Home Fiber</a></li>
+                     <li><a href="#business-packages" class="nav-link">Business Fiber</a></li>
+                     <li><a href="#coverage" class="nav-link">Coverage</a></li>
+                     <li><a href="#contact" class="nav-link">Contact</a></li>
+                 </ul>
+ 
+                 <div class="auth-btns">
+                     <a href="#" class="btn btn-secondary hover-scale" id="login-btn">Login</a>
+                     <a href="#" class="btn hover-scale" id="register-btn">Register</a>
+                 </div>
+             </nav>
+         </div>
+     </header>
+ 
+     <!-- Hero Section -->
+     <section class="hero">
+         <div class="container">
+             <h1>Ultra-Fast Fiber Internet in Kahawa Wendani</h1>
+             <p>Experience Kenya's most reliable high-speed fiber internet with dedicated support for your home or business.</p>
+             <div class="hero-btns">
+                 <a href="#home-packages" class="btn btn-secondary">View Packages</a>
+                 <a href="tel:+254110062270" class="btn">Call Now</a>
+                 <a href="https://wa.me/254110062270" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- Features Section -->
+     <section class="section features">
+         <div class="container">
+             <h2 class="section-title text-center">Why Choose Fastnet Fiber?</h2>
+             <div class="features-grid">
+                 <div class="feature-card">
+                     <div class="feature-icon">
+                         <i class="fas fa-bolt"></i>
+                     </div>
+                     <h3>Lightning Fast Speeds</h3>
+                     <p>Enjoy symmetrical upload and download speeds with our premium fiber network.</p>
+                 </div>
+ 
+                 <div class="feature-card">
+                     <div class="feature-icon">
+                         <i class="fas fa-shield-alt"></i>
+                     </div>
+                     <h3>99.9% Uptime</h3>
+                     <p>Our redundant network ensures you stay connected when you need it most.</p>
+                 </div>
+ 
+                 <div class="feature-card">
+                     <div class="feature-icon">
+                         <i class="fas fa-headset"></i>
+                     </div>
+                     <h3>24/7 Support</h3>
+                     <p>Our local support team is always ready to assist you with any issues.</p>
+                 </div>
+ 
+                 <div class="feature-card">
+                     <div class="feature-icon">
+                         <i class="fas fa-money-bill-wave"></i>
+                     </div>
+                     <h3>No Hidden Fees</h3>
+                     <p>Transparent pricing with no surprise charges or long-term contracts.</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- Packages Section -->
+     <section class="section packages" id="home-packages">
+         <div class="container">
+             <h2 class="section-title text-center">Our Internet Packages</h2>
+ 
+             <div class="package-tabs">
+                 <button class="tab-btn active" data-tab="home">Home Fiber</button>
+                 <button class="tab-btn" data-tab="business">Business Fiber</button>
+             </div>
+ 
+             <div class="package-grid" id="home-packages-container">
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Basic</h3>
+                         <p class="package-price">KES 1,500 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 5 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 5 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> 24/7 Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Basic" data-price="1500">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Basic%20package%20(5Mbps%20@KES1500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Standard</h3>
+                         <p class="package-price">KES 2,000 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 10 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 10 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> Priority Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Standard" data-price="2000">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Standard%20package%20(10Mbps%20@KES2000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Premium</h3>
+                         <p class="package-price">KES 3,000 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 15 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 15 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> Priority Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Premium" data-price="3000">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Premium%20package%20(15Mbps%20@KES3000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Ultra</h3>
+                         <p class="package-price">KES 4,000 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 20 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 20 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> VIP Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Ultra" data-price="4000">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Ultra%20package%20(20Mbps%20@KES4000)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="package-grid" id="business-packages-container" style="display: none;">
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Lite</h3>
+                         <p class="package-price">KES 2,800 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 15 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 15 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> Business Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Lite" data-price="2800">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Lite%20package%20(15Mbps%20@KES2800)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Medium</h3>
+                         <p class="package-price">KES 4,500 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 30 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 30 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> Priority Business Support</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Medium" data-price="4500">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Medium%20package%20(30Mbps%20@KES4500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Fast</h3>
+                         <p class="package-price">KES 5,500 <span>/month</span></p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 50 Mbps Download</li>
+                             <li><i class="fas fa-check"></i> 50 Mbps Upload</li>
+                             <li><i class="fas fa-check"></i> Unlimited Data</li>
+                             <li><i class="fas fa-check"></i> Free Installation</li>
+                             <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                         </ul>
+                         <div class="package-actions">
+                             <a href="#" class="btn btn-secondary btn-block pay-now-btn" data-package="Business Fast" data-price="5500">Pay Now</a>
+                             <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20the%20Business%20Fast%20package%20(50Mbps%20@KES5500)" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="package-card">
+                     <div class="package-header">
+                         <h3>Custom</h3>
+                         <p class="package-price">Custom Quote</p>
+                     </div>
+                     <div class="package-body">
+                         <ul class="package-features">
+                             <li><i class="fas fa-check"></i> 100+ Mbps Speeds</li>
+                             <li><i class="fas fa-check"></i> Dedicated Fiber Line</li>
+                             <li><i class="fas fa-check"></i> SLA Guarantee</li>
+                             <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
+                             <li><i class="fas fa-check"></i> Custom Solutions</li>
+                         </ul>
+                         <a href="https://wa.me/254110062270?text=Hi%20Fastnet%20Fiber,%20I'm%20interested%20in%20a%20Custom%20Business%20Solution" class="btn btn-block btn-whatsapp"><i class="fab fa-whatsapp"></i> Contact Sales</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- New Customer Section -->
+     <section class="section new-customer">
+         <div class="container">
+             <h2 class="section-title text-center">New Customer? Get Connected in 3 Easy Steps</h2>
+ 
+             <div class="steps">
+                 <div class="step">
+                     <div class="step-number">1</div>
+                     <h3>Choose Your Package</h3>
+                     <p>Select from our affordable home or business fiber packages that suit your needs.</p>
+                 </div>
+ 
+                 <div class="step">
+                     <div class="step-number">2</div>
+                     <h3>Register Online</h3>
+                     <p>Fill out our simple registration form with your details and preferred installation date.</p>
+                 </div>
+ 
+                 <div class="step">
+                     <div class="step-number">3</div>
+                     <h3>Get Connected</h3>
+                     <p>Our team will contact you to confirm and complete your installation within 24 hours.</p>
+                 </div>
+             </div>
+ 
+             <div class="text-center" style="margin-top: 50px;">
+                 <a href="#" class="btn btn-secondary" id="register-now-btn">Register Now</a>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- Coverage Section -->
+     <section class="section coverage" id="coverage">
+         <div class="container">
+             <h2 class="section-title text-center">Our Coverage Areas</h2>
+             <p class="text-center">We currently serve the following areas in KAHAWA WENDANI with plans to expand to more locations soon.</p>
+ 
+             <div class="coverage-areas">
+                 <div class="coverage-area">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <h3>Kahawa wendani</h3>
+                     <p>Full fiber coverage</p>
+                 </div>
+ 
+                 <div class="coverage-area">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <h3>Kahawa Sukari</h3>
+                     <p>Full fiber coverage</p>
+                 </div>
+ 
+                 <div class="coverage-area">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <h3>Kahawa Baracks</h3>
+                     <p>Partial coverage</p>
+                 </div>
+ 
+                 <div class="coverage-area">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <h3>Kahawa Sukari</h3>
+                     <p>Coming soon</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- Testimonials Section -->
+     <section class="section testimonials">
+         <div class="container">
+             <h2 class="section-title text-center">What Our Customers Say</h2>
+ 
+             <div class="testimonial-slider">
+                 <div class="testimonial">
+                     <div class="testimonial-content">
+                         <p>"Fastnet Fiber has transformed how we work from home. The speeds are consistently fast and reliable, and their customer service is exceptional. Highly recommended!"</p>
+                     </div>
+                     <div class="testimonial-author">
+                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Mwangi">
+                         <div class="author-info">
+                             <h4>John Mwangi</h4>
+                             <p>Home User, Kahawa wendani</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="testimonial">
+                     <div class="testimonial-content">
+                         <p>"As a small business owner, having reliable internet is crucial. Fastnet's business package has given us the stability we need at a reasonable price. No more downtime!"</p>
+                     </div>
+                     <div class="testimonial-author">
+                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Kamau">
+                         <div class="author-info">
+                             <h4>Sarah Kamau</h4>
+                             <p>Business Owner, Kahawa wendani </p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="testimonial">
+                     <div class="testimonial-content">
+                         <p>"The installation was quick and professional. We can now stream on multiple devices without buffering. The kids are happy with their online classes and games."</p>
+                     </div>
+                     <div class="testimonial-author">
+                         <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Ochieng">
+                         <div class="author-info">
+                             <h4>David Ochieng</h4>
+                             <p>Family User, Kahawa</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- WhatsApp CTA Section -->
+     <section class="section whatsapp-cta">
+         <div class="container">
+             <h2>Get Instant Support via WhatsApp</h2>
+             <p>Our team is ready to assist you with any questions or connection requests.</p>
+             <div class="hero-btns">
+                 <a href="https://wa.me/254110062270" class="btn btn-whatsapp" style="padding: 15px 30px;"><i class="fab fa-whatsapp"></i> Chat with Primary Number</a>
+                 <a href="https://wa.me/254758341950" class="btn btn-whatsapp" style="padding: 15px 30px;"><i class="fab fa-whatsapp"></i> Chat with Alternate Number</a>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- CTA Section -->
+     <section class="cta" id="contact">
+         <div class="container">
+             <h2>Ready to Experience Lightning Fast Internet?</h2>
+             <p>Join hundreds of satisfied customers enjoying Kenya's most reliable fiber internet service.</p>
+             <div class="hero-btns">
+                 <a href="#home-packages" class="btn btn-secondary">View Packages</a>
+                 <a href="tel:+254110062270" class="btn">Call Now</a>
+                 <a href="https://wa.me/254110062270" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+             </div>
+         </div>
+     </section>
+ 
+     <!-- Footer -->
+     <footer>
+         <div class="container">
+             <div class="footer-grid">
+                 <div class="footer-col">
+                     <div class="logo">
+                         <img src="logo.png" alt="Fastnet Fiber Logo">
+                         <div class="logo-text">
+                             <h1 style="color: var(--white); margin-bottom: 5px;">Fastnet Fiber</h1>
+                             <p style="color: #b3b3b3;">Fast. Reliable. Affordable.</p>
+                         </div>
+                     </div>
+                     <p style="margin-top: 15px; color: #b3b3b3;">Kenya's premier fiber internet provider delivering reliable, high-speed connectivity to homes and businesses in Kahawa Wendani.</p>
+                     <div class="footer-social">
+                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="#"><i class="fab fa-twitter"></i></a>
+                         <a href="#"><i class="fab fa-instagram"></i></a>
+                         <a href="#"><i class="fab fa-whatsapp"></i></a>
+                     </div>
+                 </div>
+ 
+                 <div class="footer-col">
+                     <h3>Quick Links</h3>
+                     <ul class="footer-links">
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#home-packages">Home Fiber</a></li>
+                         <li><a href="#business-packages">Business Fiber</a></li>
+                         <li><a href="#coverage">Coverage Areas</a></li>
+                         <li><a href="#contact">Contact Us</a></li>
+                     </ul>
+                 </div>
+ 
+                 <div class="footer-col">
+                     <h3>Support</h3>
+                     <ul class="footer-links">
+                         <li><a href="faqs.html">FAQs</a></li>
+                         <li><a href="speedtest.html">Speed Test</a></li>
+                         <li><a href="usage.html">Network Status</a></li>
+                         <li><a href="#">Payment Options</a></li>
+                         <li><a href="#">Terms of Service</a></li>
+                     </ul>
+                 </div>
+ 
+                 <div class="footer-col">
+                     <h3>Contact Us</h3>
+                     <ul class="footer-contact">
+                         <li>
+                             <i class="fas fa-map-marker-alt"></i>
+                             <span>Fastnet Kahawa Wendani</span>
+                         </li>
+                         <li>
+                             <i class="fas fa-phone"></i>
+                             <span>011 006 2270</span>
+                         </li>
+                         <li>
+                             <i class="fas fa-phone"></i>
+                             <span>0758 341 950</span>
+                         </li>
+                         <li>
+                             <i class="fab fa-whatsapp"></i>
+                             <span><a href="https://wa.me/254110062270" style="color: #b3b3b3;">WhatsApp Primary</a></span>
+                         </li>
+                         <li>
+                             <i class="fab fa-whatsapp"></i>
+                             <span><a href="https://wa.me/254758341950" style="color: #b3b3b3;">WhatsApp Alternate</a></span>
+                         </li>
+                         <li>
+                             <i class="fas fa-clock"></i>
+                             <span>Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 2:00 PM</span>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+ 
+             <div class="footer-bottom">
+                 <p>&copy; 2025 Fastnet Fiber Connections Limited. All Rights Reserved. | Designed By Hum</p>
+             </div>
+         </div>
+     </footer>
+ 
+     <!-- Login Modal -->
+     <div class="modal" id="login-modal">
+         <div class="modal-content">
+             <span class="close-modal">&times;</span>
+             <h2 class="modal-title">Customer Login</h2>
+ 
+             <form id="login-form">
+                 <div class="form-group">
+                     <label for="login-email">Email Address</label>
+                     <input type="email" id="login-email" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="login-password">Password</label>
+                     <input type="password" id="login-password" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <button type="submit" class="btn btn-block">Login</button>
+                 </div>
+ 
+                 <div class="text-center">
+                     <p>Don't have an account? <a href="#" id="switch-to-register">Register here</a></p>
+                     <p><a href="#" id="forgot-password">Forgot password?</a></p>
+                 </div>
+             </form>
+         </div>
+     </div>
+ 
+     <!-- Register Modal -->
+     <div class="modal" id="register-modal">
+         <div class="modal-content">
+             <span class="close-modal">&times;</span>
+             <h2 class="modal-title">New Customer Registration</h2>
+ 
+             <form id="register-form">
+                 <div class="form-row">
+                     <div class="form-group">
+                         <label for="first-name">First Name</label>
+                         <input type="text" id="first-name" class="form-control" required>
+                     </div>
+ 
+                     <div class="form-group">
+                         <label for="last-name">Last Name</label>
+                         <input type="text" id="last-name" class="form-control" required>
+                     </div>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="register-email">Email Address</label>
+                     <input type="email" id="register-email" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="phone">Phone Number</label>
+                     <input type="tel" id="phone" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="address">Physical Address</label>
+                     <input type="text" id="address" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="package">Select Package</label>
+                     <select id="package" class="form-control" required>
+                         <option value="">-- Select Package --</option>
+                         <option value="Basic">Basic (5Mbps @ KES 1,500)</option>
+                         <option value="Standard">Standard (10Mbps @ KES 2,000)</option>
+                         <option value="Premium">Premium (15Mbps @ KES 3,000)</option>
+                         <option value="Ultra">Ultra (20Mbps @ KES 4,000)</option>
+                         <option value="Business Lite">Business Lite (15Mbps @ KES 2,800)</option>
+                         <option value="Business Medium">Business Medium (30Mbps @ KES 4,500)</option>
+                         <option value="Business Fast">Business Fast (50Mbps @ KES 5,500)</option>
+                     </select>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="register-password">Create Password</label>
+                     <input type="password" id="register-password" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <label for="confirm-password">Confirm Password</label>
+                     <input type="password" id="confirm-password" class="form-control" required>
+                 </div>
+ 
+                 <div class="form-group">
+                     <button type="submit" class="btn btn-block btn-secondary">Register Now</button>
+                 </div>
+ 
+                 <div class="text-center">
+                     <p>Already have an account? <a href="#" id="switch-to-login">Login here</a></p>
+                 </div>
+             </form>
+         </div>
+     </div>
+ 
+     <!-- Payment Modal -->
+     <div class="modal" id="payment-modal">
+         <div class="modal-content">
+             <span class="close-modal">&times;</span>
+             <h2 class="modal-title">Make Payment</h2>
+ 
+             <div id="payment-details">
+                 <p>You are about to pay for:</p>
+                 <h3 id="payment-package-name" style="margin-bottom: 5px;"></h3>
+                 <p id="payment-package-price" style="font-size: 1.2rem; margin-bottom: 20px;"></p>
+             </div>
+ 
+             <form id="payment-form">
+                 <div class="form-group">
+                     <label>Payment Method</label>
+                     <div class="payment-methods">
+                         <div class="payment-method">
+                             <input type="radio" name="payment-method" id="mpesa" value="mpesa" checked>
+                             <label for="mpesa">
+                                 <i class="fas fa-mobile-alt"></i>
+                                 M-Pesa
+                             </label>
+                         </div>
+                         <div class="payment-method">
+                             <input type="radio" name="payment-method" id="card" value="card">
+                             <label for="card">
+                                 <i class="far fa-credit-card"></i>
+                                 Card
+                             </label>
+                         </div>
+                         <div class="payment-method">
+                             <input type="radio" name="payment-method" id="bank" value="bank">
+                             <label for="bank">
+                                 <i class="fas fa-university"></i>
+                                 Bank
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div id="mpesa-payment">
+                     <div class="form-group">
+                         <label for="mpesa-phone">M-Pesa Phone Number</label>
+                         <input type="tel" id="mpesa-phone" class="form-control" placeholder="e.g. 254712345678" required>
+                     </div>
+ 
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-block btn-secondary">Pay via M-Pesa</button>
+                     </div>
+                 </div>
+ 
+                 <div id="card-payment" style="display: none;">
+                     <div class="form-group">
+                         <label for="card-number">Card Number</label>
+                         <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456">
+                     </div>
+ 
+                     <div class="form-row">
+                         <div class="form-group">
+                             <label for="expiry">Expiry Date</label>
+                             <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
+                         </div>
+ 
+                         <div class="form-group">
+                             <label for="cvv">CVV</label>
+                             <input type="text" id="cvv" class="form-control" placeholder="123">
+                         </div>
+                     </div>
+ 
+                     <div class="form-group">
+                         <label for="card-name">Name on Card</label>
+                         <input type="text" id="card-name" class="form-control">
+                     </div>
+ 
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-block btn-secondary">Pay with Card</button>
+                     </div>
+                 </div>
+ 
+                 <div id="bank-payment" style="display: none;">
+                     <div class="form-group">
+                         <p>Please make a bank transfer to:</p>
+                         <p><strong>Bank:</strong> Equity Bank</p>
+                         <p><strong>Account Name:</strong> Fastnet Fiber Connections Ltd</p>
+                         <p><strong>Account Number:</strong> 1234567890</p>
+                         <p><strong>Branch:</strong> Ruiru</p>
+                         <p>Use your account number as the reference</p>
+                     </div>
+ 
+                     <div class="form-group">
+                         <label for="payment-proof">Upload Payment Proof</label>
+                         <input type="file" id="payment-proof" class="form-control">
+                     </div>
+ 
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-block btn-secondary">Submit Proof</button>
+                     </div>
+                 </div>
+             </form>
+         </div>
+     </div>
+ 
+     <!-- Dashboard Modal (for demo purposes) -->
+     <div class="modal" id="dashboard-modal">
+         <div class="modal-content">
+             <span class="close-modal">&times;</span>
+             <h2 class="modal-title">Customer Dashboard</h2>
+ 
+             <div class="dashboard-header">
+                 <div class="container">
+                     <div class="user-info">
+                         <div class="user-avatar">JM</div>
+                         <div class="user-details">
+                             <h3>John Mwangi</h3>
+                             <p>Account: #FASTNET-00123</p>
+                             <p>Package: Premium (15Mbps)</p>
+                         </div>
+                     </div>
+ 
+                     <div class="dashboard-nav">
+                         <ul>
+                             <li><a href="#" class="active">Dashboard</a></li>
+                             <li><a href="#">Payments</a></li>
+                             <li><a href="#">Usage</a></li>
+                             <li><a href="#">Support</a></li>
+                             <li><a href="#">Settings</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="dashboard-content">
+                 <h3>Account Overview</h3>
+                 <p>Welcome back, John! Here's a quick overview of your account.</p>
+ 
+                 <div class="features-grid" style="margin-top: 30px;">
+                     <div class="feature-card">
+                         <div class="feature-icon">
+                             <i class="fas fa-wifi"></i>
+                         </div>
+                         <h3>Connection Status</h3>
+                         <p><strong style="color: var(--success);">Active</strong></p>
+                         <p>Expires: 30th June 2025</p>
+                     </div>
+ 
+                     <div class="feature-card">
+                         <div class="feature-icon">
+                             <i class="fas fa-clock"></i>
+                         </div>
+                         <h3>Uptime</h3>
+                         <p><strong>99.8%</strong> this month</p>
+                         <p>Last outage: 5 minutes on 15th June</p>
+                     </div>
+ 
+                     <div class="feature-card">
+                         <div class="feature-icon">
+                             <i class="fas fa-tachometer-alt"></i>
+                         </div>
+                         <h3>Usage</h3>
+                         <p><strong>156GB</strong> used this month</p>
+                         <p>Unlimited data remaining</p>
+                     </div>
+ 
+                     <div class="feature-card">
+                         <div class="feature-icon">
+                             <i class="fas fa-money-bill-wave"></i>
+                         </div>
+                         <h3>Billing</h3>
+                         <p>Next payment: <strong>KES 3,000</strong></p>
+                         <p>Due: 25th June 2025</p>
+                         <a href="#" class="btn btn-secondary btn-block" style="margin-top: 15px;">Pay Now</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ 
+     <script>
+         // Simple tab functionality
+         document.addEventListener('DOMContentLoaded', function() {
+             const tabBtns = document.querySelectorAll('.tab-btn');
+ 
+             tabBtns.forEach(btn => {
+                 btn.addEventListener('click', function() {
+                     // Remove active class from all buttons
+                     tabBtns.forEach(b => b.classList.remove('active'));
+ 
+                     // Add active class to clicked button
+                     this.classList.add('active');
+ 
+                     // Hide all package grids
+                     document.getElementById('home-packages-container').style.display = 'none';
+                     document.getElementById('business-packages-container').style.display = 'none';
+ 
+                     // Show the selected package grid
+                     const tab = this.getAttribute('data-tab');
+                     if (tab === 'home') {
+                         document.getElementById('home-packages-container').style.display = 'grid';
+                     } else {
+                         document.getElementById('business-packages-container').style.display = 'grid';
+                     }
+                 });
+             });
+ 
+             // Mobile menu toggle functionality
+             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+             const mainNav = document.querySelector('.main-nav');
+ 
+             mobileMenuBtn.addEventListener('click', function() {
+                 this.classList.toggle('active');
+                 mainNav.classList.toggle('active');
+ 
+                 // Toggle body scroll when menu is open
+                 if (mainNav.classList.contains('active')) {
+                     document.body.style.overflow = 'hidden';
+                 } else {
+                     document.body.style.overflow = '';
+                 }
+             });
+ 
+             // Close menu when clicking on nav links
+             document.querySelectorAll('.main-nav a').forEach(link => {
+                 link.addEventListener('click', function() {
+                     mobileMenuBtn.classList.remove('active');
+                     mainNav.classList.remove('active');
+                     document.body.style.overflow = '';
+                 });
+             });
+ 
+             // Smooth scrolling for anchor links
+             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                 anchor.addEventListener('click', function(e) {
+                     e.preventDefault();
+ 
+                     const targetId = this.getAttribute('href');
+                     if (targetId === '#') return;
+ 
+                     const targetElement = document.querySelector(targetId);
+                     if (targetElement) {
+                         window.scrollTo({
+                             top: targetElement.offsetTop - 100,
+                             behavior: 'smooth'
+                         });
+                     }
+                 });
+             });
+ 
+             // Modal functionality
+             const loginModal = document.getElementById('login-modal');
+             const registerModal = document.getElementById('register-modal');
+             const paymentModal = document.getElementById('payment-modal');
+             const dashboardModal = document.getElementById('dashboard-modal');
+ 
+             const loginBtn = document.getElementById('login-btn');
+             const registerBtn = document.getElementById('register-btn');
+             const registerNowBtn = document.getElementById('register-now-btn');
+             const payNowBtns = document.querySelectorAll('.pay-now-btn');
+             const closeModalBtns = document.querySelectorAll('.close-modal');
+ 
+             const switchToRegister = document.getElementById('switch-to-register');
+             const switchToLogin = document.getElementById('switch-to-login');
+ 
+             // Payment method toggle
+             const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+             const mpesaPayment = document.getElementById('mpesa-payment');
+             const cardPayment = document.getElementById('card-payment');
+             const bankPayment = document.getElementById('bank-payment');
+ 
+             paymentMethods.forEach(method => {
+                 method.addEventListener('change', function() {
+                     mpesaPayment.style.display = 'none';
+                     cardPayment.style.display = 'none';
+                     bankPayment.style.display = 'none';
+ 
+                     if (this.value === 'mpesa') {
+                         mpesaPayment.style.display = 'block';
+                     } else if (this.value === 'card') {
+                         cardPayment.style.display = 'block';
+                     } else {
+                         bankPayment.style.display = 'block';
+                     }
+                 });
+             });
+ 
+             // Open modals
+             loginBtn.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 loginModal.style.display = 'block';
+             });
+ 
+             registerBtn.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 registerModal.style.display = 'block';
+             });
+ 
+             registerNowBtn.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 registerModal.style.display = 'block';
+             });
+ 
+             payNowBtns.forEach(btn => {
+                 btn.addEventListener('click', function(e) {
+                     e.preventDefault();
+                     const packageName = this.getAttribute('data-package');
+                     const packagePrice = this.getAttribute('data-price');
+ 
+                     document.getElementById('payment-package-name').textContent = packageName;
+                     document.getElementById('payment-package-price').textContent = `KES ${packagePrice}/month`;
+ 
+                     paymentModal.style.display = 'block';
+                 });
+             });
+ 
+             // Close modals
+             closeModalBtns.forEach(btn => {
+                 btn.addEventListener('click', function() {
+                     loginModal.style.display = 'none';
+                     registerModal.style.display = 'none';
+                     paymentModal.style.display = 'none';
+                     dashboardModal.style.display = 'none';
+                 });
+             });
+ 
+             // Switch between login and register
+             switchToRegister.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 loginModal.style.display = 'none';
+                 registerModal.style.display = 'block';
+             });
+ 
+             switchToLogin.addEventListener('click', function(e) {
+                 e.preventDefault();
+                 registerModal.style.display = 'none';
+                 loginModal.style.display = 'block';
+             });
+ 
+             // Close modal when clicking outside
+             window.addEventListener('click', function(e) {
+                 if (e.target === loginModal) {
+                     loginModal.style.display = 'none';
+                 }
+                 if (e.target === registerModal) {
+                     registerModal.style.display = 'none';
+                 }
+                 if (e.target === paymentModal) {
+                     paymentModal.style.display = 'none';
+                 }
+                 if (e.target === dashboardModal) {
+                     dashboardModal.style.display = 'none';
+                 }
+             });
+ 
+             // Form submissions (demo purposes)
+             document.getElementById('login-form').addEventListener('submit', function(e) {
+                 e.preventDefault();
+                 loginModal.style.display = 'none';
+                 dashboardModal.style.display = 'block';
+             });
+ 
+             document.getElementById('register-form').addEventListener('submit', function(e) {
+                 e.preventDefault();
+ 
+                 // Get form values
+                 const firstName = document.getElementById('first-name').value;
+                 const lastName = document.getElementById('last-name').value;
+                 const email = document.getElementById('register-email').value;
+                 const phone = document.getElementById('phone').value;
+                 const address = document.getElementById('address').value;
+                 const package = document.getElementById('package').value;
+ 
+                 // Construct WhatsApp message
+                 const message = `New Customer Registration:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nPackage: ${package}\n\nPlease contact for installation.`;
+ 
+                 // Encode for WhatsApp URL
+                 const encodedMessage = encodeURIComponent(message);
+ 
+                 // Close modal and open WhatsApp
+                 registerModal.style.display = 'none';
+                 window.open(`https://wa.me/254110062270?text=${encodedMessage}`, '_blank');
+ 
+                 // Show success message (in a real app, you would save to database first)
+                 alert('Registration successful! Our team will contact you shortly for installation.');
+             });
+ 
+             document.getElementById('payment-form').addEventListener('submit', function(e) {
+                 e.preventDefault();
+ 
+                 // Get selected payment method
+                 const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+ 
+                 if (paymentMethod === 'mpesa') {
+                     const phone = document.getElementById('mpesa-phone').value;
+ 
+                     // In a real implementation, you would call Daraja API here
+                     alert(`STK Push sent to ${phone}. Please complete payment on your phone.`);
+ 
+                     // For demo, we'll just show a success message
+                     setTimeout(() => {
+                         paymentModal.style.display = 'none';
+                         alert('Payment successful! Thank you for your payment.');
+                     }, 2000);
+                 } else if (paymentMethod === 'card') {
+                     // In a real implementation, you would process card payment
+                     alert('Card payment would be processed here with a payment gateway.');
+                 } else {
+                     // Bank transfer
+                     alert('Please complete your bank transfer and upload proof.');
+                 }
+             });
+         });
+     </script>
+ </body>
+ </html>
