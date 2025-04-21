@@ -457,31 +457,43 @@
              display: flex;
              align-items: center;
              gap: 15px;
+             transition: transform 0.4s ease;
          }
+      .logo:hover {
+       transform: translateX(5px);
+       }
  
          .logo img {
-             height: 190px;
+             height: 160px;
              width: auto;
              border: none;         /* removes any border */
              outline: none;        /* removes any focus outline */
              background: none;     /* removes any background if it's showing */
              box-shadow: none; 
-             display: block;
-             box-shadow: none;
+             transition: transform 0.4s ease;
          
  
          }
+      .logo:hover img {
+      transform: rotate(-5deg) scale(1.03);
+}
+
  
          .logo-text h1 {
-             font-size: 1.8rem;
-             margin-bottom: 5px;
-             color: var(--primary);
+                 font-size: 2.2rem;
+                 margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #005eff, #003f88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
          }
  
          .logo-text p {
-             font-size: 0.9rem;
-             color: var(--gray);
-             margin-bottom: 0;
+              display: none;
          }
  
          /* Modern Header Styles */
